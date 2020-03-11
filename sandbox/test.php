@@ -50,8 +50,11 @@
      <div class="data-input">
        <h4>データ入力テスト</h4>
        <label>我が家のルール</label>
-       <input type="text" name="sent" value="" placeholder="入力してください">
-
+       <input type="text" id="sent" name="sent" value="" placeholder="入力してください">
+       <select id="category">
+         <option value=3>食事</option>
+         <option value=4>お出かけ</option>
+       </select>
        <button id="submit_btn" type="button">
          投稿
        </button>

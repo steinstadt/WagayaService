@@ -1,0 +1,88 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: url("../image/wood.png");
+}
+
+.web-content {
+  height: 100%;
+}
+
+.display-area {
+  height: 70%;
+}
+
+.display-canvas {
+  height: 90%;
+  background-color: white;
+  margin: 20px;
+}
+
+.post-area {
+  height: 30%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* 投稿画面エリア */
+#post-name {
+  height: 30%;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#post-name h3 {
+  margin: 0px;
+}
+
+#post-input {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#input-area {
+  height: 100%;
+  width: 70%;
+  float: left;
+  margin: 0px;
+  background-color: rgba(204, 204, 255, 0.5);
+}
+
+#help-area {
+  height: 100%;
+  width: 30%;
+  float: right;
+  margin: 0px;
+  background-color: rgba(255, 204, 255, 0.5);
+}
+
+#help-area h3 {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+#help-area img {
+  width: 40%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* 投稿一覧表示エリア */
+#display-name {
+  height: 10%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#display-set {
+  height: 85%;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1px;
+  background-color: rgba(170, 255, 255, 0.5);
+}
