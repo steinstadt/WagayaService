@@ -19,7 +19,25 @@
           <div class="display-canvas">
             <h2>みんなの投稿</h2>
             <div class="message-area">
+              <?php
 
+                $link = new mysqli("mysql10.onamae.ne.jp", "uilrw_steinstadt", "gooddog5!", "uilrw_wagaya_service");
+                if (mysqli_connect_errno()) {
+                  die("データベースに接続できません:" . mysqli_error() . "\n");
+                }
+
+                // データベースの検索結果を表示する
+                $query = "SELECT p.id, p.sent, p.favorite, p.surprise, p.client_time, c.name FROM post p, category c WHERE p.category=c.id";
+                $result = $link->query($query);
+                while ($row = $result->fetch_assoc()){
+                  print('<div id=message-part'.$row['id'].'>'); // message-part
+                  print('<div class=message-sent>'.$row['sent'].'</div>'); // message-sent
+                  print('<div class=message-attr>'); // message-attr
+                  print($row['name'].' '.$row['favorite'].' '.$row['surprise'].' '.$row['client_time']);
+                  print('</div>');
+                  print('</div>');
+                }
+              ?>
             </div>
           </div>
         </div>

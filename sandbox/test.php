@@ -60,6 +60,8 @@
        </button>
      </div>
 
+     <div class="box-anim"></div>
+
      <script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
      <script type="text/javascript" src="./test.js"></script>
 
