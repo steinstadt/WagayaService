@@ -40,6 +40,7 @@ body {
 }
 
 #post-input {
+  height: 70%;
   width: 70%;
   margin: 0 auto;
 }
@@ -50,6 +51,21 @@ body {
   float: left;
   margin: 0px;
   background-color: rgba(204, 204, 255, 0.5);
+}
+
+#submit_btn {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+#submit_btn:hover {
+  background: #67c5ff;
+  color: white;
 }
 
 #help-area {
@@ -89,6 +105,7 @@ body {
 
 #post-text {
   width: 100%;
+  height: 100%;
 }
 
 #post-category {

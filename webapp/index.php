@@ -30,14 +30,14 @@
           <div id="post-name">
             <h3>我が家のルールを投稿する</h3>
           </div>
-          <div id="post-input">
-            <table style="width: 100%;">
+          <div id="post-input" style="height:70%;">
+            <table style="width: 100%; height: 100%;">
               <tr>
-                <td><label>メッセージ</label></td>
+                <td align="right"><label>我が家のルール</label></td>
                 <td><input type="text" id="post-text" placeholder="あなたのルールを教えて！"></td>
               </tr>
               <tr>
-                <td><label>カテゴリ</label></td>
+                <td align="right"><label>カテゴリ</label></td>
                 <td>
                   <select id="post-category">
                     <option value=3>食事</option>
@@ -46,7 +46,8 @@
                 </td>
               </tr>
               <tr>
-                <td>
+                <td></td>
+                <td align="right">
                   <button id="submit_btn" type="button">
                     投稿
                   </button>
@@ -67,6 +68,7 @@
     </div>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
 
   </body>
 </html>
