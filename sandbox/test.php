@@ -2,6 +2,7 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="test.css">
     <title>PHPテスト</title>
   </head>
   <body>
@@ -60,7 +61,9 @@
        </button>
      </div>
 
-     <div class="box-anim"></div>
+     <div style="width:100%; height:100%">
+        <div class="box-anim"></div> 
+     </div>
 
      <script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
      <script type="text/javascript" src="./test.js"></script>

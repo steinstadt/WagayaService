@@ -114,3 +114,21 @@ body {
 #post-category {
   width: 70%;
 }
+
+/* メッセージエリア */
+.message-area {
+  position: relative;
+  height: 90%;
+}
+
+@keyframes bounce {
+  to { transform: translatey(10px);}
+}
+
+.message-pos {
+  position: absolute;
+  animation: bounce 1.5s alternate infinite ease-in-out;
+  background-color: rgb(204, 204, 255);
+  border-radius: 10px;
+  padding: 5px;
+}

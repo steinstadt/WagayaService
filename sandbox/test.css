@@ -1,0 +1,23 @@
+@keyframes bounce {
+  to { transform: translatey(50px);}
+}
+
+@keyframes translate {
+  to { transform: translatex(900%);}
+}
+
+div.box-anim {
+  position: absolute;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  animation: bounce 1.5s alternate infinite ease-in-out;
+}
+
+/* div.box-anim-linear {
+  width: 10%;
+  height: 100%;
+  position:absolute;
+  animation: translate 15s infinite linear;
+} */
+/* margin-left and margin-topを変更できそう */

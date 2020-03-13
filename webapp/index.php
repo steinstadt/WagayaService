@@ -17,7 +17,7 @@
         </div>
         <div id="display-set">
           <div class="display-canvas">
-            <h2>みんなの投稿</h2>
+            <h2 style="margin:0px; height:10%">みんなの投稿</h2>
             <div class="message-area">
               <?php
 
@@ -27,13 +27,13 @@
                 }
 
                 // データベースの検索結果を表示する
-                $query = "SELECT p.id, p.sent, p.favorite, p.surprise, p.client_time, c.name FROM post p, category c WHERE p.category=c.id";
+                $query = "SELECT p.id, p.sent, p.favorite, c.name FROM post p, category c WHERE p.category=c.id ORDER BY RAND() LIMIT 10";
                 $result = $link->query($query);
                 while ($row = $result->fetch_assoc()){
-                  print('<div id=message-part'.$row['id'].'>'); // message-part
+                  print('<div id=\''.$row['id'].'\' class=\'message-pos\'>'); // message-part
                   print('<div class=message-sent>'.$row['sent'].'</div>'); // message-sent
                   print('<div class=message-attr>'); // message-attr
-                  print($row['name'].' '.$row['favorite'].' '.$row['surprise'].' '.$row['client_time']);
+                  print($row['name'].' いいね: '.$row['favorite']);
                   print('</div>');
                   print('</div>');
                 }
