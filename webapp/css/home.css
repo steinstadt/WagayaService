@@ -30,7 +30,7 @@ body {
 /* 投稿画面エリア */
 #post-name {
   height: 30%;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 #post-input {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -85,4 +85,12 @@ body {
   margin: 0 auto;
   padding: 1px;
   background-color: rgba(170, 255, 255, 0.5);
+}
+
+#post-text {
+  width: 100%;
+}
+
+#post-category {
+  width: 70%;
 }

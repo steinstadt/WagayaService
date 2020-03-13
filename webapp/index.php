@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="shortcut icon" href="/Wagaya/webapp/image/icon/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/Wagaya/webapp/image/icon/favicon.ico" type="image/vnd.microsoft.icon">
     <title>我が家のルール</title>
   </head>
   <body>
@@ -16,6 +18,9 @@
         <div id="display-set">
           <div class="display-canvas">
             <h2>みんなの投稿</h2>
+            <div class="message-area">
+
+            </div>
           </div>
         </div>
       </div>
@@ -26,14 +31,28 @@
             <h3>我が家のルールを投稿する</h3>
           </div>
           <div id="post-input">
-            <input type="text" id="post-text" name="" placeholder="あなたのルールを教えて！">
-            <select id="post-category">
-              <option value=3>食事</option>
-              <option value=4>お出かけ</option>
-            </select>
-            <button id="submit_btn" type="button">
-              投稿
-            </button>
+            <table style="width: 100%;">
+              <tr>
+                <td><label>メッセージ</label></td>
+                <td><input type="text" id="post-text" placeholder="あなたのルールを教えて！"></td>
+              </tr>
+              <tr>
+                <td><label>カテゴリ</label></td>
+                <td>
+                  <select id="post-category">
+                    <option value=3>食事</option>
+                    <option value=4>お出かけ</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button id="submit_btn" type="button">
+                    投稿
+                  </button>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
         <div id="help-area">
