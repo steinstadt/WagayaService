@@ -61,8 +61,8 @@
        </button>
      </div>
 
-     <div style="width:100%; height:100%">
-        <div class="box-anim"></div> 
+     <div class="box-anim-linear">
+        <div class="box-anim"></div>
      </div>
 
      <script type="text/javascript" src="./jquery-3.4.1.min.js"></script>

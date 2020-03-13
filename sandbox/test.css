@@ -14,10 +14,9 @@ div.box-anim {
   animation: bounce 1.5s alternate infinite ease-in-out;
 }
 
-/* div.box-anim-linear {
+.box-anim-linear {
   width: 10%;
   height: 100%;
   position:absolute;
   animation: translate 15s infinite linear;
-} */
-/* margin-left and margin-topを変更できそう */
+}
