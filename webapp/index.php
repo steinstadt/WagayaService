@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="shortcut icon" href="/Wagaya/webapp/image/icon/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="icon" href="/Wagaya/webapp/image/icon/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/Wagaya/webapp/image/icon/favicon.ico">
+    <link rel="shortcut icon" href="https://steinstadt.site/wp-content/uploads/2020/03/family.png">
     <title>我が家のルール</title>
   </head>
   <body>
@@ -17,23 +17,25 @@
         </div>
         <div id="display-set">
           <div class="display-canvas">
-            <h2 style="margin:0px; height:10%">みんなの投稿</h2>
             <div class="message-area">
+              <div>
+                <span style="margin:0px; height:10%">みんなの投稿(PCではドラッグして動かせます)</span>
+                <p><a href="https://steinstadt.site/Wagaya/webapp/display.php">全投稿はこちら</a></p>
+              </div>
               <?php
-
                 $link = new mysqli("mysql10.onamae.ne.jp", "uilrw_steinstadt", "gooddog5!", "uilrw_wagaya_service");
                 if (mysqli_connect_errno()) {
                   die("データベースに接続できません:" . mysqli_error() . "\n");
                 }
 
                 // データベースの検索結果を表示する
-                $query = "SELECT p.id, p.sent, p.favorite, c.name FROM post p, category c WHERE p.category=c.id ORDER BY RAND() LIMIT 10";
+                $query = "SELECT p.id, p.sent, p.favorite, c.name, c.attr FROM post p, category c WHERE p.category=c.id ORDER BY RAND() LIMIT 10";
                 $result = $link->query($query);
                 while ($row = $result->fetch_assoc()){
-                  print('<div id=\''.$row['id'].'\' class=\'message-pos\'>'); // message-part
+                  print('<div id=\''.$row['id'].'\' class=\'message-pos '.$row['attr'].'\'>'); // message-part
                   print('<div class=message-sent>'.$row['sent'].'</div>'); // message-sent
                   print('<div class=message-attr>'); // message-attr
-                  print($row['name'].' いいね: '.$row['favorite']);
+                  print($row['name'].'   <button onclick=\'myFavorite('.$row['id'].')\'>いいね</button>  : <span id=\'fav-'.$row['id'].'\'>'.$row['favorite'].'</span>');
                   print('</div>');
                   print('</div>');
                 }
@@ -58,8 +60,14 @@
                 <td align="right"><label>カテゴリ</label></td>
                 <td>
                   <select id="post-category">
-                    <option value=3>食事</option>
-                    <option value=4>お出かけ</option>
+                    <option value=1>食事</option>
+                    <option value=2>アウトドア</option>
+                    <option value=3>買い物</option>
+                    <option value=4>遊び</option>
+                    <option value=5>行事</option>
+                    <option value=6>恋愛</option>
+                    <option value=8>会話</option>
+                    <option value=7>その他</option>
                   </select>
                 </td>
               </tr>

@@ -57,18 +57,24 @@ body {
   background-color: rgba(204, 204, 255, 0.5);
 }
 
+#input-area-2 {
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+}
+
 #submit_btn {
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #67c5ff;
-  border: solid 2px #67c5ff;
+  color: black;
+  border: solid 2px black;
   border-radius: 3px;
-  transition: .4s;
+  transition: .4s
 }
 
 #submit_btn:hover {
-  background: #67c5ff;
+  background: black;
   color: white;
 }
 
@@ -107,6 +113,13 @@ body {
   background-color: rgba(170, 255, 255, 0.5);
 }
 
+#display-set-2 {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1px;
+  background-color: rgba(170, 255, 255, 0.5);
+}
+
 #post-text {
   width: 100%;
 }
@@ -128,7 +141,50 @@ body {
 .message-pos {
   position: absolute;
   animation: bounce 1.5s alternate infinite ease-in-out;
-  background-color: rgb(204, 204, 255);
-  border-radius: 10px;
   padding: 5px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
+
+.eat {
+  background-color: rgb(204, 204, 255);
+}
+
+.outdoor {
+  background-color: rgb(0, 164, 141);
+  color: white;
+}
+
+.buy {
+  background-color: rgb(204, 126, 177);
+  color: white;
+}
+
+.play {
+  background-color: rgb(238, 130, 124);
+  color: white;
+}
+
+.event {
+  background-color: rgb(107, 111, 89);
+  color: white;
+}
+
+.love {
+  background-color: rgb(79, 69, 92);
+}
+
+.hello {
+  background-color: rgb(170, 207, 83);
+}
+
+.other {
+  background-color: rgb(255, 217, 0);
+}
+
+#tbl-bdr table,#tbl-bdr td,#tbl-bdr th {
+    border-collapse: collapse;
+    border:1px solid #333;
+    }
